@@ -1,0 +1,75 @@
+﻿@model Pizzapan.EntityLayer.Concrete.Contact
+<section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+        <div class="contant11-top-bg">
+            <div class="container">
+                <div class="title-content text-center">
+                    <h6 class="sub-title">İletişim</h6>
+                    <h3 class="title-big">Bizimle iletişime geçmek için tıkla </h3>
+                </div>
+                <div class="d-grid contact section-gap mt-lg-5 mt-4">
+                    <div class="contact-info-left d-grid text-center">
+                        <div class="contact-info">
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
+                            <h4>Get Directions</h4>
+                            <p>Eskişehir / Odunpazarı</p>
+                        </div>
+                        <div class="contact-info">
+                            <span class="fa fa-phone" aria-hidden="true"></span>
+                            <h4>Contact Us</h4>
+                            <p><a href="tel:+1-2345-678-11">+1-2345-678-11</a></p>
+                            <p><a href="mailto:clglufurkan@gmail.com" class="email">clglufurkan@gmail.com</a></p>
+                        </div>
+                        <div class="contact-info">
+                            <span class="fa fa-clock-o" aria-hidden="true"></span>
+                            <h4>Açılış Saati</h4>
+                            <p>Pazartesi - Cuma</p>
+                            <p> 09:00 am to 10:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-41-mian section-gap mt-5">
+            <div class="container">
+                <div class="d-grid align-form-map">
+                    <div class="form-inner-cont">
+
+                        
+                        <form  method="post" class="signin-form">
+                            <div class="form-input">
+                                <label >Name</label>
+                                <input type="text" class="form form-control" asp-for="Name" />
+                            </div>
+                            <div class="form-input">
+                                <label >Email(Required)*</label>
+                                <input type="email" class="form form-control" asp-for="Email" required />
+                            </div>
+                            <div class="form-input">
+                                <label>Subject</label>
+                                <input type="text" class="form form-control" asp-for="Subject" required />
+                            </div>
+                            <div class="form-input">
+                                <label >Message(Required)*</label>
+                                <textarea type="text" class="form form-control" asp-for="Message" rows="5"></textarea>
+                            </div>
+
+                            <button class="btn btn-style btn-primary" id="btn1">Submit</button>
+
+                        </form>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d911.6249054512729!2d30.515790915886264!3d39.777183606436566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc3e08220c0e5f%3A0xbc89395938049a08!2sEski%C5%9Fehir!5e0!3m2!1str!2str!4v1689923160748!5m2!1str!2str"
+                                frameborder="0" allowfullscreen=""></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<script>
+
+    
+</script>
