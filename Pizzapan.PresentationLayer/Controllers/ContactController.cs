@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Pizzapan.EntityLayer.Concrete;
 using PizzaPan.BusinessLayer.Abstract;
 using System;
@@ -42,6 +43,13 @@ namespace Pizzapan.PresentationLayer.Controllers
 
             return RedirectToAction("Index","Default");
 
+        }
+
+        public IActionResult GetMesssagesId(int id)
+        {
+            var values = _contactService.TGetByID(id);
+            return View(values);
+                
         }
     }
 }

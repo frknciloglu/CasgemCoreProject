@@ -17,7 +17,8 @@ namespace Pizzapan.PresentationLayer.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var values=_ourTeamService.TGetList();
+            return View(values);
         }
         [HttpGet]
         public IActionResult AddOurTeam()
@@ -32,7 +33,7 @@ namespace Pizzapan.PresentationLayer.Controllers
             if (result.IsValid)
             {
                 _ourTeamService.TInsert(ourTeam);
-                return RedirectToAction("Index");
+                return RedirectToAction("GetTeams");
             }
             else
             {
@@ -42,6 +43,29 @@ namespace Pizzapan.PresentationLayer.Controllers
                 }
             }
             return View();
+        }
+        [HttpGet]
+        public IActionResult GetTeams()
+        {
+            var values = _ourTeamService.TGetList();
+            return View(values);
+        }
+        [HttpGet]
+        public IActionResult UpdateTeam(int id) {
+            var values=_ourTeamService.TGetByID(id);
+            return View(values);
+        }
+        [HttpPost]
+        public IActionResult UpdateTeam(OurTeam ourTeam)
+        {
+            _ourTeamService.TUpdate(ourTeam);
+            return RedirectToAction("GetTeams");
+        }
+        public IActionResult DeleteTeam(int id)
+        {
+            var value = _ourTeamService.TGetByID(id);
+            _ourTeamService.TDelete(value);
+            return RedirectToAction("GetTeams");
         }
     }
 }

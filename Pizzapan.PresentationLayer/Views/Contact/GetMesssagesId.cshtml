@@ -1,0 +1,26 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "GetMesssagesId";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="d-flex flex-column">
+    <div>
+        <label asp-for="Name" class="form-control" style="color:gray">ad-soyad </label>
+        <input type="text" class="form-control" asp-for="Name" />
+        
+
+    </div>
+    <div>
+        <label asp-for="Subject" class="form-control" style="color:gray">Konu </label>
+        <input type="text" asp-for="Subject" class="form-control" />
+
+    </div>
+    <div>
+        <label asp-for="Message" class="form-control" style="color:gray">message </label>
+
+        <input type="text" asp-for="Message" class="form-control" />
+    </div>
+
+
+
+</div>

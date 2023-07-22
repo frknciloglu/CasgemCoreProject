@@ -1,0 +1,41 @@
+﻿@model List<OurTeam>
+@{
+    ViewData["Title"] = "GetTeams";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h1>Şeflerimiz</h1>
+
+<form method="post">
+
+
+<table class="table table-hover">
+    <tr>
+        <td>#</td>
+        <td>İsim Soyisim</td>
+        <td>Meslek</td>
+        <td>Durum</td>
+
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <th>@item.OurTeamID</th>
+            <th>@item.Name  @item.Surname</th>
+            <th>@item.Title</th>
+            @if (item.Status == true)
+            {
+                <th>Aktif</th>
+            }else{<th>Ayrıldı</th>};
+            <th><a href="/OurTeam/UpdateTeam/@item.OurTeamID" class="btn btn-warning">Güncelle</a></th>
+            <th><a href="/OurTeam/DeleteTeam/@item.OurTeamID" class="btn btn-danger">Sil</a></th>
+        </tr>
+
+    }
+
+</table>
+</form>
+
+<a href="/OurTeam/AddOurTeam/" class="btn btn-primary"> Şef ekle</a>

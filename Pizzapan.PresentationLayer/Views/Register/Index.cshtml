@@ -3,33 +3,52 @@
     Layout = null;
 }
 
-<h1>Index</h1>
 
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<form method="post">
-    <div class="container">
-        <br />
-        <label>Adınız</label>
-        <input type="text" class="form-control" asp-for="Name" />
-        <br />
-        <label>Soyadınız</label>
-        <input type="text" class="form-control" asp-for="Surname" />
-        <br />
-        <label>Kullanıcı Adı</label>
-        <input type="text" class="form-control" asp-for="Username" />
-        <br />
-        <label>Email</label>
-        <input type="email" class="form-control" asp-for="Email" />
-        <br />
-        <label>Şifre</label>
-        <input type="password" class="form-control" asp-for="Password" />
-        <br />
-        <label>Şifre Tekrarı</label>
-        <input type="password" class="form-control" asp-for="ConfirmPassword" />
-        <br />
-        <button class="btn btn-primary">Kaydol</button>
+<section class="vh-100 bg-image"
+         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                            <form method="post">
+                                <div class="container">
+                                    <br />
+                                    <label>Adınız</label>
+                                    <input type="text" class="form-control" asp-for="Name" />
+                                    <br />
+                                    <label>Soyadınız</label>
+                                    <input type="text" class="form-control" asp-for="Surname" />
+                                    <br />
+                                    <label>Kullanıcı Adı</label>
+                                    <input type="text" class="form-control" asp-for="Username" />
+                                    <br />
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" asp-for="Email" />
+                                    <br />
+                                    <label>Şifre</label>
+                                    <input type="password" class="form-control" asp-for="Password" />
+                                    <br />
+                                    <label>Şifre Tekrarı</label>
+                                    <input type="password" class="form-control" asp-for="ConfirmPassword" />
+                                    <br />
+                                    <button class="btn btn-primary d-flex align-content-center justify-content-center w-100">Kaydol</button>
+                                    <a href="/Default/Index/" class="btn btn-warning mt-2">Ana Sayfa</a>
 
-        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                                </div>
+                            </form>
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
+</section>
